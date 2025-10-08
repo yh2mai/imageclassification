@@ -1,0 +1,9 @@
+[submodule "cifar10"]
+	path = cifar10
+	url = git@github.com:yh2mai/cifar10.git
+[submodule "imageclassification-front"]
+	path = imageclassification-front
+	url = git@github.com:yh2mai/imageclassification-front.git
+[submodule "imageclassification-back"]
+	path = imageclassification-back
+	url = git@github.com:yh2mai/imageclassification-back.git
