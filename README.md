@@ -30,7 +30,7 @@ User → Frontend (Next.js) → Backend (Flask API) → Model (PyTorch .pth) →
 ```
 imageclassification/
 ├── cifar10/                     # Model training submodule (PyTorch)
-│   └── model.pth                # Trained weights file (example)
+│   └── cifar_net.pth                # Trained weights file (example)
 ├── imageclassification-back/    # Flask backend API (submodule)
 ├── imageclassification-front/   # Next.js TypeScript frontend (submodule)
 └── README.md                    # This file
@@ -59,9 +59,9 @@ git submodule update --init --recursive
 ```bash
 cd imageclassification-back
 python -m venv venv
-source venv/bin/activate   # On Windows: venv\Scripts\activate
+source venv/bin/activate   # On Windows: venv/Scripts/activate
 pip install -r requirements.txt
-python app.py
+flask run
 ```
 
 The Flask API will start on `http://127.0.0.1:5000` by default.
@@ -88,10 +88,10 @@ If you wish to retrain the model:
 
 ```bash
 cd ../cifar10
-python train.py
+python main.py
 ```
 
-The trained weights (`model.pth`) will be saved/updated in the `cifar10` folder.
+The trained weights (`cifar_net.pth`) will be saved/updated in the `cifar10` folder.
 
 ---
 
